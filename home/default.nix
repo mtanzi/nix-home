@@ -4,6 +4,7 @@
   home.packages = [
     pkgs.ctags
     pkgs.fzf
+    pkgs.htop
     pkgs.tmux
     pkgs.tree
     pkgs.zsh
