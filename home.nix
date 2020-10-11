@@ -16,47 +16,7 @@
     pkgs.tree
   ];
 
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    extraConfig = builtins.readFile ~/.config/nvim/init.vim;
-    # extraConfig = "colorscheme gruvbox";
-    plugins = with pkgs.vimPlugins; [
-      # Language ##########################
-      vim-nix
-      vim-ruby # ruby
-      vim-go # go
-      vim-elixir # Elixir
-
-      # Style #############################
-      gruvbox
-      oceanic-next
-      vim-airline
-
-      # Editor Features ####################################
-      vim-airline-themes
-      vim-easymotion
-      neosnippet
-      neosnippet-snippets
-
-      vim-signify
-      vim-fugitive
-
-      fzf-vim
-      fzfWrapper
-
-      vim-surround # cs"'
-      vim-repeat # cs"'...
-      vim-commentary # gcap
-      vim-indent-object # >aI
-      vim-easy-align # vipga
-      vim-eunuch # :Rename foo.rb
-      vim-sneak
-      supertab
-      ale # linting
-      nerdtree
-    ];
-  };
+  import = [ ./nvim/default.nix ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
