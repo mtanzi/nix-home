@@ -1,13 +1,19 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.ctags
-    pkgs.fzf
-    pkgs.htop
-    pkgs.tmux
-    pkgs.tree
-    pkgs.zsh
+  home.packages = with pkgs; [
+    # utils
+    bat
+    broot
+    ctags
+    fzf
+    htop
+    fd
+    ytop
+    ripgrep
+    tmux
+    tree
+    zsh
   ];
 
   imports = [
