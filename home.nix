@@ -17,7 +17,7 @@
     pkgs.zsh
   ];
 
-  import = [
+  imports = [
     ./nvim/default.nix
     ./tmux/default.nix
   ];
