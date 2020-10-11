@@ -9,18 +9,7 @@
   home.username = "mtanzi";
   home.homeDirectory = "/Users/mtanzi";
 
-  home.packages = [
-    pkgs.ctags
-    pkgs.fzf
-    pkgs.tmux
-    pkgs.tree
-    pkgs.zsh
-  ];
-
-  imports = [
-    ./nvim/default.nix
-    ./tmux/default.nix
-  ];
+  imports = [ ./home/default.nix ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
