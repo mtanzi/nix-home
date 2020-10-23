@@ -6,6 +6,7 @@
     bat
     broot
     ctags
+    gitAndTools.diff-so-fancy
     fzf
     htop
     fd
