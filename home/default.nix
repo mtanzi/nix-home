@@ -10,15 +10,18 @@
     fzf
     htop
     fd
-    ytop
     ripgrep
     tmux
     tree
     zsh
+
+    # MacOS utils
+    coreutils
   ];
 
   imports = [
     ./nvim/default.nix
     ./tmux/default.nix
+    ./git/default.nix
   ];
 }
